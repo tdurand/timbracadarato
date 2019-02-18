@@ -8,17 +8,20 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build;npx cap copy",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch"
   },
   "dependencies": {
+    "@capacitor/cli": "^1.0.0-beta.17",
+    "@capacitor/core": "^1.0.0-beta.17",
+    "@capacitor/ios": "^1.0.0-beta.17",
     "@ionic/core": "4.0.1",
     "dayjs": "^1.8.6"
   },
   "devDependencies": {
     "@stencil/core": "0.18.0",
-    "workbox-build": "3.6.3"
+    "workbox-build": "3.4.1"
   }
 }

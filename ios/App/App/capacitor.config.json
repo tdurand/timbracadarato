@@ -1,0 +1,6 @@
+{
+  "appId": "com.timbracadarato",
+  "appName": "Timbracadarato",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

@@ -20,16 +20,20 @@ export class AppRoot {
   }
   
   startTimer() {
+    this.audio.play();
+    this.audio.pause();
+
     let now = new Date();
     this.targetTime = dayjs(now).add(this.intervalDuration, 'm');
     this.currentTime = dayjs(now);
     this.oneSecondInterval = window.setInterval(() => {
       this.currentTime = dayjs();
-    }, 800);
+    }, 100);
   }
 
   stopTimer() {
     this.targetTime = null;
+    this.audio.pause();
     if(this.oneSecondInterval) {
       window.clearInterval(this.oneSecondInterval);
     }
